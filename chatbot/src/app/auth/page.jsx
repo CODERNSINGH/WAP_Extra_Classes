@@ -1,5 +1,6 @@
 "use client"
 
+import { Signup } from '@/services/auth'
 import React, { useState } from 'react'
 
 export default function Page() {
@@ -15,7 +16,7 @@ export default function Page() {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log(form)
+    <Signup/>
   }
 
   return (

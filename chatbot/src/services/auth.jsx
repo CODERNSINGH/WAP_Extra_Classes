@@ -1,5 +1,28 @@
-export const signup = async({email,password})=>{
-    const response = await fetch("/api/")
-
-    head
+export const signup = async ({email ,password})=>{
+    const response = await fetch ("/api/auth/signup",{
+        headers:{
+            "Content-Type": "application/json"
+            },
+            body:JSON.stringify({email,password}),
+            method: "POST",
+    });
+    if (!response.ok){
+    }return await response.json();
 }
+export const login = async ({email ,password})=>{
+    const response = await fetch ("/api/auth/signup",{
+        headers:{
+            "Content-Type": "application/json"
+            },
+            body:JSON.stringify({email,password}),
+            method: "POST",
+    });
+    if (!response.ok){
+    }return await response.json();
+}
+
+
+
+
+
+
