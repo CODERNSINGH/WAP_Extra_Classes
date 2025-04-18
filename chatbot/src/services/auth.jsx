@@ -1,5 +1,5 @@
-export const signup = async ({email ,password})=>{
-    const response = await fetch ("/api/auth/signup",{
+export const Signup = async ({email ,password})=>{
+    const response = await fetch ("./api/auth/signup",{
         headers:{
             "Content-Type": "application/json"
             },
@@ -9,8 +9,8 @@ export const signup = async ({email ,password})=>{
     if (!response.ok){
     }return await response.json();
 }
-export const login = async ({email ,password})=>{
-    const response = await fetch ("/api/auth/signup",{
+export const Login = async ({email ,password})=>{
+    const response = await fetch ("./api/auth/signup",{
         headers:{
             "Content-Type": "application/json"
             },
@@ -18,7 +18,7 @@ export const login = async ({email ,password})=>{
             method: "POST",
     });
     if (!response.ok){
-    }return await response.json();
+    }await response.json();
 }
 
 

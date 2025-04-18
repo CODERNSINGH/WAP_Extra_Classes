@@ -1,6 +1,6 @@
 "use client"
 
-import { Signup } from '@/services/auth'
+import { Login, Signup } from '@/services/auth'
 import React, { useState } from 'react'
 
 export default function Page() {
@@ -14,14 +14,19 @@ export default function Page() {
     setForm(prev => ({ ...prev, [name]: value }))
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    <Signup/>
+
+    const response = await Signup({email:form.email,password:form.password})
+    const response2 = await Login({email:form.email,password:form.password})
+
+    
   }
 
   return (
     <div>
       <h1 className='text-3xl font-bold'>Sign Up</h1>
+      <h1></h1>
       <form onSubmit={handleSubmit}>
         <input
           className='border m-10'
