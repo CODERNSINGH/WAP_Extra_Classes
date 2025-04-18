@@ -20,6 +20,7 @@ export default function Page() {
     const response = await Signup({email:form.email,password:form.password})
     const response2 = await Login({email:form.email,password:form.password})
 
+    return response
     
   }
 
